@@ -43,7 +43,7 @@ const placeholder = function (word) {
     const placeholderLetters = [];
     for (const letter of word) {
         placeholderLetters.push("●");
-        //console.log(letter);
+        console.log(letter);
     }
     wordInProgress.innerText = placeholderLetters.join("");
 };
