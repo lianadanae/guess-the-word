@@ -44,12 +44,10 @@ const placeholder = function (word) {
     const placeholderLetters = [];
     for (const letter of word) {
         placeholderLetters.push("●");
-        console.log(letter);
+        //console.log(letter);
     }
     wordInProgress.innerText = placeholderLetters.join("");
 };
-
-placeholder(word);
 
 // Guess button event listener
 guessLetterButton.addEventListener("click", function (e) {
@@ -126,6 +124,7 @@ const countGuessesRemaining = function (guess) {
     } else {
         message.innerText = `Good guess. The word has the letter ${guess}.`;
     }
+    
     if (remainingGuesses === 0) {
         message.innerHTML = `Game over!  The word is <span class="highlight">${word}</span>`;
     } else if (remainingGuesses === 1) {
