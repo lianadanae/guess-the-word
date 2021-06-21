@@ -18,7 +18,6 @@ const remainingGuessesSpan = document.querySelector(".remaining span");
 
 // The empty paragraph where messages will appear when the player guesses a letter.
 const message = document.querySelector(".message");
-const playAgainButton = document.querySelector(".play-again");
 
 // The hidden button that will appear prompting the player to play again.
 const playAgainButton = document.querySelector(".play-again");
@@ -124,7 +123,7 @@ const countGuessesRemaining = function (guess) {
     } else {
         message.innerText = `Good guess. The word has the letter ${guess}.`;
     }
-    
+
     if (remainingGuesses === 0) {
         message.innerHTML = `Game over!  The word is <span class="highlight">${word}</span>`;
     } else if (remainingGuesses === 1) {
